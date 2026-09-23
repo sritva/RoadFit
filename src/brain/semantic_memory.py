@@ -4,7 +4,7 @@ from sklearn.ensemble import RandomForestClassifier
 import joblib
 import networkx as nx
 import os
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 
 class SemanticKnowledgeEngine:
     """
@@ -50,7 +50,39 @@ class SemanticKnowledgeEngine:
         w_enc = self.weather_encoding.get(weather, 0)
         t_enc = self.traffic_encoding.get(traffic, 0)
         
-        return [width, length, speed_kph, hw_enc, w_enc, t_enc]
+        # Synthetic Multimodal Features (Simulating Satellite CV and Raycasting)
+        sim_housing_density, sim_parked_cars, raycast_occlusion = self._simulate_multimodal_features(hw, width, length)
+        
+        return [width, length, speed_kph, hw_enc, w_enc, t_enc, sim_housing_density, sim_parked_cars, raycast_occlusion]
+
+    def _simulate_multimodal_features(self, highway_type: str, width: float, length: float) -> Tuple[float, float, float]:
+        """
+        Oracle simulating a Satellite CV and Raycast pipeline.
+        In a production environment, this would call Google Earth Engine and Mapbox.
+        """
+        import random
+        # Base distributions on highway type
+        if highway_type in ['residential', 'living_street']:
+            housing_density = random.normalvariate(50.0, 10.0) # Dense housing
+            parked_cars = random.normalvariate(15.0, 5.0)      # Many parked cars blocking shoulders
+            # Raycast: High occlusion, physical width is tighter than reported graph width
+            raycast_occlusion = random.uniform(0.6, 0.95) 
+        elif highway_type in ['service', 'pedestrian']:
+            housing_density = random.normalvariate(20.0, 5.0)
+            parked_cars = random.normalvariate(2.0, 1.0)
+            raycast_occlusion = random.uniform(0.4, 0.7)
+        elif highway_type in ['primary', 'secondary', 'trunk']:
+            housing_density = random.normalvariate(5.0, 2.0)
+            parked_cars = random.normalvariate(0.5, 0.5)
+            # Raycast: Low occlusion, wide open avenues
+            raycast_occlusion = random.uniform(0.0, 0.2)
+        else:
+            housing_density = random.normalvariate(10.0, 5.0)
+            parked_cars = random.normalvariate(5.0, 2.0)
+            raycast_occlusion = random.uniform(0.2, 0.5)
+            
+        # Ensure positive bounds
+        return max(0.0, housing_density), max(0.0, parked_cars), max(0.0, min(1.0, raycast_occlusion))
 
     def consolidate(self, db_path: str, G: nx.MultiDiGraph):
         """

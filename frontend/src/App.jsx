@@ -194,9 +194,9 @@ export default function App() {
 
   const handleTrainBrain = async () => {
     setTrainingBrain(true);
-    setBrainMsg('Brain spinning up multiprocessing... simulating 20,000 combinations.');
+    setBrainMsg('Brain spinning up multiprocessing... simulating 100,000 combinations (Expect high CPU usage).');
     try {
-      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=20000`);
+      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=100000`);
       setBrainMsg(res.data.message);
     } catch(err) {
       setBrainMsg('Brain training failed.');
@@ -423,7 +423,7 @@ export default function App() {
             <Brain size={14} /> Cognitive Routing Core (Episodic Memory)
           </label>
           <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
-            Simulate 20,000 routes across contextual environments to learn historical failure points (uses CPU multiprocessing).
+            Simulate 100,000 routes across contextual environments to learn historical failure points (uses 100% CPU multiprocessing).
           </p>
           <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
             <span style={{color: '#f9a8d4'}}>Working Memory:</span> Click the map (after setting Orig/Dest) to simulate a live roadblock (15min TTL).
@@ -437,7 +437,7 @@ export default function App() {
                 background: trainingBrain ? '#475569' : 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
                 color: 'white', fontWeight: 'bold', fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 4
               }}>
-              {trainingBrain ? <><Loader2 size={12} className="spinner"/> Training...</> : '🧠 Train Brain (20k)'}
+              {trainingBrain ? <><Loader2 size={12} className="spinner"/> Training...</> : '🧠 Train Brain (100k)'}
             </button>
             <button 
               onClick={handleConsolidateBrain} 
