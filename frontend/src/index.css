@@ -260,7 +260,6 @@ body {
   width: 4px;
 }
 .result-card.roadfit::before { background: #4f46e5; }
-.result-card.gmaps::before { background: #ef4444; }
 
 .result-header {
   font-size: 12px;
@@ -270,7 +269,6 @@ body {
   color: var(--text-muted);
 }
 .result-card.roadfit .result-header { color: #818cf8; }
-.result-card.gmaps .result-header { color: #f87171; }
 
 .result-stats {
   display: flex;

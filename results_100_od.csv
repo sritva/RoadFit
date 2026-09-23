@@ -1,0 +1,501 @@
+PairID,Category,Model,Feasible,ISER_%,CNME_%,MDEF_%,TRR,ETTP_%,MinClearance_m
+1,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,20.09,0.0,4.1
+1,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,22.19,-8.05,4.1
+1,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+1,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+1,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+2,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,53.19,0.0,4.1
+2,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,53.27,0.0,4.1
+2,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+2,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+2,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,54.03,-1.39,4.1
+3,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,96.67,0.0,4.1
+3,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,74.3,-1.34,4.1
+3,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+3,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+3,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,87.37,10.99,4.1
+4,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,38.61,0.0,4.1
+4,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,99.56,58.78,-18.55,4.1
+4,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+4,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+4,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,42.09,-31.01,4.1
+5,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,29.03,0.0,4.1
+5,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,33.77,-14.13,4.1
+5,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+5,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+5,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,31.32,-7.77,4.1
+6,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,71.16,0.0,4.1
+6,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,24.28,0.0,4.1
+6,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+6,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+6,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,71.24,0.0,4.1
+7,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,27.06,0.0,4.1
+7,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,29.42,-7.98,4.1
+7,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+7,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+7,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,29.04,-6.6,4.1
+8,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,99.42,21.57,0.0,4.1
+8,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,99.41,22.16,-1.58,4.1
+8,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+8,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+8,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+9,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,98.55,52.97,0.0,4.1
+9,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,98.55,52.87,-0.06,4.1
+9,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+9,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+9,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,98.55,52.83,-0.06,4.1
+10,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,28.16,0.0,4.1
+10,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,29.44,-3.56,4.1
+10,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+10,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+10,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,30.99,-8.96,4.1
+11,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,39.45,0.0,4.1
+11,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,38.64,0.8,4.1
+11,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+11,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+11,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,48.02,-19.77,4.1
+12,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,40.14,0.0,4.1
+12,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,54.32,-26.37,4.1
+12,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+12,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+12,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,37.98,5.22,4.1
+13,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,22.11,0.0,4.1
+13,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,25.01,-12.56,4.1
+13,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+13,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+13,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+14,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,15.7,0.0,4.1
+14,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,94.47,14.93,6.78,4.1
+14,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+14,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+14,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+15,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,35.06,0.0,4.1
+15,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,34.98,0.0,4.1
+15,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+15,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+15,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,35.25,-0.56,4.1
+16,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,60.59,0.0,4.1
+16,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,21.47,0.0,4.1
+16,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+16,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+16,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,41.0,0.0,4.1
+17,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,22.84,0.0,4.1
+17,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,21.86,6.34,4.1
+17,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+17,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+17,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,30.28,-24.33,4.1
+18,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,34.14,0.0,4.1
+18,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,31.53,-13.15,4.1
+18,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+18,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+18,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,34.49,-1.54,4.1
+19,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,64.34,0.0,4.1
+19,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,64.58,0.0,4.1
+19,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+19,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+19,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,65.06,-1.14,4.1
+20,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,48.1,0.0,4.1
+20,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,47.56,0.97,4.1
+20,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+20,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+20,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,59.2,-19.77,4.1
+21,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,20.44,0.0,4.1
+21,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,22.86,-9.88,4.1
+21,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+21,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+21,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+22,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,44.2,0.0,4.1
+22,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,51.67,-14.35,4.1
+22,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+22,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+22,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,49.87,-11.24,4.1
+23,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,70.83,15.33,0.0,4.1
+23,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,71.32,69.24,1.73,4.1
+23,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+23,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+23,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,69.3,59.81,-4.99,4.1
+24,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,40.2,0.0,4.1
+24,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,38.67,3.75,4.1
+24,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+24,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+24,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,39.32,1.81,4.1
+25,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,21.97,0.0,4.1
+25,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,91.3,24.07,-8.01,4.1
+25,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+25,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+25,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+26,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,18.44,0.0,4.1
+26,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,19.12,-1.89,4.1
+26,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+26,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+26,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,27.05,-32.03,4.1
+27,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,99.83,30.26,0.0,4.1
+27,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,89.31,27.23,11.27,4.1
+27,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+27,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+27,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,37.87,-19.11,4.1
+28,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,30.69,0.0,4.1
+28,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,31.64,-4.46,4.1
+28,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+28,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+28,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+29,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,52.34,0.0,4.1
+29,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,53.35,-2.09,4.1
+29,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+29,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+29,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,91.75,-6.12,4.1
+30,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,42.33,0.0,4.1
+30,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,37.74,13.07,4.1
+30,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+30,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+30,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,47.82,-11.9,4.1
+31,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,45.68,0.0,4.1
+31,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,46.6,-2.23,4.1
+31,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+31,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+31,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,40.52,12.21,4.1
+32,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,27.5,0.0,4.1
+32,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,28.04,-2.83,4.1
+32,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+32,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+32,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,30.18,-10.07,4.1
+33,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,29.85,0.0,4.1
+33,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,31.24,-4.27,4.1
+33,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+33,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+33,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,32.75,-9.12,4.1
+34,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,49.61,0.0,4.1
+34,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,56.07,-11.35,4.1
+34,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+34,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+34,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+35,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,26.25,0.0,4.1
+35,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,26.45,-0.31,4.1
+35,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+35,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+35,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+36,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,99.29,26.26,0.0,4.1
+36,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,99.24,27.77,-6.64,4.1
+36,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+36,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+36,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.21,29.1,-10.9,4.1
+37,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,24.54,0.0,4.1
+37,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,25.2,-1.85,4.1
+37,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+37,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+37,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+38,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,21.55,0.0,4.1
+38,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,25.07,-13.17,4.1
+38,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+38,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+38,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,26.28,-18.57,4.1
+39,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,99.69,26.65,0.0,4.1
+39,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,26.97,-0.4,4.1
+39,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+39,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+39,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.68,27.76,-4.47,4.1
+40,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,36.56,0.0,4.1
+40,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,71.85,0.0,4.1
+40,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+40,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+40,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,89.5,0.0,4.1
+41,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,39.12,0.0,4.1
+41,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,36.31,7.93,4.1
+41,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+41,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+41,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,16.47,-16.07,4.1
+42,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,31.71,0.0,4.1
+42,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,38.78,2.3,4.1
+42,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+42,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+42,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,34.71,-7.74,4.1
+43,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,25.3,0.0,4.1
+43,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,99.62,27.15,-6.55,4.1
+43,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+43,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+43,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.56,30.62,-18.26,4.1
+44,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,87.52,29.4,0.0,4.1
+44,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,99.62,32.87,-9.4,4.1
+44,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+44,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+44,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,31.85,-7.27,4.1
+45,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,87.11,30.88,0.0,4.1
+45,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,87.11,30.72,0.0,4.1
+45,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+45,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+45,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,86.2,32.76,-6.59,4.1
+46,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,32.76,0.0,4.1
+46,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,39.68,-17.44,4.1
+46,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+46,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+46,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,40.14,-18.31,4.1
+47,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,99.32,24.9,0.0,4.1
+47,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,99.3,25.85,-2.78,4.1
+47,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+47,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+47,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.27,26.52,-5.97,4.1
+48,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,31.41,0.0,4.1
+48,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,31.24,0.0,4.1
+48,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+48,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+48,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,31.78,-1.42,4.1
+49,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,39.41,0.0,4.1
+49,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,40.39,-2.07,4.1
+49,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+49,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+49,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,39.5,0.0,4.1
+50,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,24.21,0.0,4.1
+50,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,23.69,2.67,4.1
+50,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+50,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+50,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,31.56,-24.11,4.1
+51,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,46.1,0.0,4.1
+51,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,23.82,0.0,4.1
+51,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+51,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+51,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,90.4,0.0,4.1
+52,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,57.31,0.0,4.1
+52,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,1.52,0.0,4.1
+52,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+52,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+52,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,1.42,0.0,4.1
+53,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,67.34,0.0,4.1
+53,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,65.39,2.92,4.1
+53,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+53,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+53,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,70.76,-4.92,4.1
+54,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,99.72,38.87,0.0,4.1
+54,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,34.52,-7.53,4.1
+54,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+54,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+54,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,91.66,39.73,-1.98,4.1
+55,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,54.96,0.0,4.1
+55,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,99.3,48.37,-8.14,4.1
+55,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+55,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+55,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,55.17,0.0,4.1
+56,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,20.24,0.0,4.1
+56,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,20.2,0.0,4.1
+56,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+56,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+56,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+57,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,27.01,0.0,4.1
+57,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,27.27,-1.39,4.1
+57,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+57,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+57,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+58,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,99.86,21.19,0.0,4.1
+58,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,99.85,22.11,-2.75,4.1
+58,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+58,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+58,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+59,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,61.29,0.0,4.1
+59,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,63.74,-3.55,4.1
+59,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+59,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+59,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,78.46,-22.23,4.1
+60,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,90.65,22.36,0.0,4.1
+60,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,22.73,-1.2,4.1
+60,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+60,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+60,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+61,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,98.2,0.99,0.0,4.1
+61,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,98.2,51.06,0.0,4.1
+61,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+61,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+61,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,98.2,151.0,0.0,4.1
+62,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,83.66,80.7,0.0,4.1
+62,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,83.66,80.79,0.0,4.1
+62,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+62,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+62,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,83.54,1.55,-0.76,4.1
+63,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,42.14,0.0,4.1
+63,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,47.64,-11.52,4.1
+63,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+63,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+63,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,44.69,-5.4,4.1
+64,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,87.58,29.41,0.0,4.1
+64,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,87.48,29.93,-0.76,4.1
+64,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+64,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+64,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,87.39,29.86,-1.5,4.1
+65,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,59.37,0.0,4.1
+65,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,61.24,-3.61,4.1
+65,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+65,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+65,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,57.87,2.02,4.1
+66,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,29.89,0.0,4.1
+66,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,29.44,2.24,4.1
+66,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+66,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+66,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+67,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,35.91,0.0,4.1
+67,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,33.66,7.23,4.1
+67,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+67,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+67,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,34.15,5.25,4.1
+68,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,99.87,19.93,0.0,4.1
+68,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,99.87,20.22,-2.54,4.1
+68,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+68,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+68,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+69,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,88.83,27.06,0.0,4.1
+69,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,88.91,26.45,0.72,4.1
+69,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+69,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+69,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,88.28,28.18,-4.75,4.1
+70,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,26.61,0.0,4.1
+70,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,26.89,-3.39,4.1
+70,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+70,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+70,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+71,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,25.22,0.0,4.1
+71,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,24.99,0.21,4.1
+71,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+71,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+71,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.06,26.97,-8.27,4.1
+72,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,48.01,0.0,4.1
+72,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,71.36,0.0,4.1
+72,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+72,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+72,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,46.08,3.31,4.1
+73,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,40.5,0.0,4.1
+73,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,38.74,6.29,4.1
+73,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+73,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+73,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,40.54,0.0,4.1
+74,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,33.38,0.0,4.1
+74,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,28.98,16.12,4.1
+74,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+74,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+74,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,34.8,-4.74,4.1
+75,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,31.55,0.0,4.1
+75,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,31.35,0.0,4.1
+75,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+75,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+75,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,30.91,2.71,4.1
+76,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,38.63,0.0,4.1
+76,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,30.67,26.14,4.1
+76,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+76,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+76,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,41.47,-7.16,4.1
+77,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,77.49,52.95,0.0,4.1
+77,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,47.13,12.66,4.1
+77,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+77,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+77,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,78.09,31.51,2.73,4.1
+78,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,25.17,0.0,4.1
+78,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,41.48,-1.64,4.1
+78,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+78,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+78,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,51.96,-22.02,4.1
+79,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,99.88,19.27,0.0,4.1
+79,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,99.87,19.61,-1.86,4.1
+79,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+79,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+79,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+80,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,26.31,0.0,4.1
+80,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,26.27,0.11,4.1
+80,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+80,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+80,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+81,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,37.19,0.0,4.1
+81,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,38.05,-1.81,4.1
+81,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+81,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+81,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,36.4,2.58,4.1
+82,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,29.92,0.0,4.1
+82,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,29.95,0.26,4.1
+82,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+82,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+82,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,30.62,-3.22,4.1
+83,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,47.61,0.0,4.1
+83,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,33.71,-13.75,4.1
+83,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+83,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+83,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,55.76,-15.37,4.1
+84,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,33.79,0.0,4.1
+84,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,36.38,-7.88,4.1
+84,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+84,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+84,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,15.15,-7.88,4.1
+85,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,99.04,25.17,0.0,4.1
+85,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,100.0,33.08,-24.42,4.1
+85,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+85,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+85,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,100.0,33.26,-24.7,4.1
+86,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,30.97,0.0,4.1
+86,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,54.74,-6.67,4.1
+86,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+86,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+86,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,54.34,-6.79,4.1
+87,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,81.08,35.89,0.0,4.1
+87,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,39.96,12.66,4.1
+87,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+87,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+87,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,81.52,43.42,2.36,4.1
+88,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,99.87,19.17,0.0,4.1
+88,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,99.87,19.43,-2.48,4.1
+88,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+88,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+88,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+89,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,120.62,0.0,4.1
+89,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,1.64,-16.58,4.1
+89,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+89,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+89,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,68.54,-11.35,4.1
+90,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,40.91,0.0,4.1
+90,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,41.11,-0.26,4.1
+90,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+90,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+90,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,43.21,-5.48,4.1
+91,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,33.76,0.0,4.1
+91,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,33.75,0.0,4.1
+91,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+91,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+91,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,29.36,-7.19,4.1
+92,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,100.0,29.5,0.0,4.1
+92,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,99.68,31.34,-6.29,4.1
+92,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+92,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+92,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,86.78,35.8,-18.26,4.1
+93,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,44.15,0.0,4.1
+93,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,40.02,10.73,4.1
+93,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+93,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+93,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,18.57,-1.03,4.1
+94,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,36.02,0.0,4.1
+94,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,35.79,0.0,4.1
+94,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+94,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+94,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,35.39,0.41,4.1
+95,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,19.93,0.0,4.1
+95,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,20.1,-2.53,4.1
+95,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+95,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+95,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+96,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,31.68,0.0,4.1
+96,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,27.29,16.24,4.1
+96,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+96,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+96,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,31.83,-0.43,4.1
+97,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,34.29,0.0,4.1
+97,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,28.99,17.45,4.1
+97,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+97,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+97,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,33.94,0.07,4.1
+98,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,38.75,0.0,4.1
+98,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,37.96,2.2,4.1
+98,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+98,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+98,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,100.0,18.5,-11.64,4.1
+99,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,99.65,36.33,0.0,4.1
+99,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,100.0,30.08,20.64,4.1
+99,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+99,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+99,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,99.64,46.38,-3.11,4.1
+100,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,100.0,16.86,0.0,4.1
+100,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,92.47,21.92,-23.18,4.1
+100,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+100,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+100,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
