@@ -101,6 +101,42 @@ def train_brain(iterations: int = 1000):
     thread.start()
     return {"message": f"Brain training initiated with {iterations} simulated scenarios in the background."}
 
+class RoadblockRequest(BaseModel):
+    lat: float
+    lon: float
+    severity: float = 1.0
+
+@app.post("/brain/consolidate")
+def consolidate_semantic_memory():
+    if MASTER_GRAPH is None:
+        raise HTTPException(status_code=500, detail="Master graph not loaded.")
+    
+    import threading
+    def _consolidate():
+        BRAIN.semantic.consolidate(BRAIN.episodic.db_path, MASTER_GRAPH)
+    
+    thread = threading.Thread(target=_consolidate)
+    thread.start()
+    return {"message": "Semantic Memory Consolidation (Deep Sleep ML Training) started in background."}
+
+@app.post("/brain/roadblock")
+def report_live_roadblock(request: RoadblockRequest):
+    if KD_TREE is None:
+        raise HTTPException(status_code=500, detail="Map not loaded.")
+    
+    # Find nearest intersection (node)
+    _, ni = KD_TREE.query([request.lat, request.lon])
+    nearest_node = int(NODE_IDS[ni])
+    
+    blocked_edges = 0
+    # Block all outgoing edges from this intersection in working memory
+    for u, v, k, data in MASTER_GRAPH.out_edges(nearest_node, keys=True, data=True):
+        edge_id = f"{u}_{v}_{k}"
+        BRAIN.working.report_live_hazard(edge_id, request.severity, ttl_seconds=900) # 15 mins
+        blocked_edges += 1
+        
+    return {"message": f"🚨 Working Memory: Blocked {blocked_edges} edges around intersection for 15 minutes."}
+
 def _extract_route_coords_from_edges(
     graph,
     path_nodes: List[int],

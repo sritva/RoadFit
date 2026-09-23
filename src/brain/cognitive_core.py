@@ -6,6 +6,8 @@ from typing import Optional, Dict, Any, Tuple, List
 import concurrent.futures
 
 from src.brain.episodic_memory import EpisodicMemoryBank
+from src.brain.semantic_memory import SemanticKnowledgeEngine
+from src.brain.working_memory import WorkingMemory
 from src.vehicle.vehicle_digital_twin import VehicleDigitalTwin
 from src.routing.risk_aware_router import route_risk_aware
 
@@ -81,7 +83,9 @@ def simulate_routes_chunk(G: nx.MultiDiGraph, iterations: int, vehicle: VehicleD
 
 class CognitiveCore:
     def __init__(self, db_path="brain_memory.db"):
-        self.memory = EpisodicMemoryBank(db_path)
+        self.episodic = EpisodicMemoryBank(db_path)
+        self.semantic = SemanticKnowledgeEngine()
+        self.working = WorkingMemory()
 
     def train_brain(self, G: nx.MultiDiGraph, iterations: int = 20000):
         """
@@ -118,7 +122,7 @@ class CognitiveCore:
                 try:
                     experiences = future.result()
                     if experiences:
-                        self.memory.commit_experiences_batch(experiences)
+                        self.episodic.commit_experiences_batch(experiences)
                         total_experiences += len(experiences)
                         print(f"  [+] Consolidated {len(experiences)} memories into SQLite...")
                 except Exception as e:
@@ -128,20 +132,31 @@ class CognitiveCore:
 
     def apply_cognitive_bias(self, G: nx.MultiDiGraph, weather: str, traffic: str, vehicle_type: str) -> nx.MultiDiGraph:
         """
-        Injects historical failure probabilities directly into the graph.
-        The risk_aware_router will pick up '_history_penalty'.
+        Injects failure probabilities directly into the graph.
+        Tri-Partite Memory Fusion: Working (Priority 1) -> Episodic (Priority 2) -> Semantic (Priority 3).
         """
         G_biased = G.copy()
         
-        # Recall penalties from episodic memory
-        penalties = self.memory.recall_edge_penalties(weather, traffic, vehicle_type)
+        # Recall penalties from episodic memory (Historical exact matches)
+        episodic_penalties = self.episodic.recall_edge_penalties(weather, traffic, vehicle_type)
         
         for u, v, k, data in G_biased.edges(keys=True, data=True):
             edge_id = f"{u}_{v}_{k}"
-            if edge_id in penalties:
-                # Store the historical failure rate (0.0 to 1.0)
-                data['_history_penalty'] = penalties[edge_id]
-            else:
-                data['_history_penalty'] = 0.0
+            
+            # Priority 1: Working Memory (Immediate live hazards)
+            working_penalty = self.working.get_live_penalty(edge_id)
+            if working_penalty > 0:
+                data['_history_penalty'] = working_penalty
+                continue
+                
+            # Priority 2: Episodic Memory (Exact historical experience)
+            if edge_id in episodic_penalties:
+                data['_history_penalty'] = episodic_penalties[edge_id]
+                continue
+                
+            # Priority 3: Semantic Memory (Generalization for unseen roads)
+            # If we've never been here before, use ML to imagine the risk
+            semantic_penalty = self.semantic.predict_failure_probability(data, weather, traffic)
+            data['_history_penalty'] = semantic_penalty
                 
         return G_biased

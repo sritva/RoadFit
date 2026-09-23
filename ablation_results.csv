@@ -1,0 +1,601 @@
+PairID,Category,Model,Feasible,ISER_%,CNME_%,MDEF_%,TRR,ETTP_%,MinClearance_m
+1,Residential->Residential,B0 (Unconstrained),1,3.81,0.0,20.02,32.26,0.0,-0.2
+1,Residential->Residential,B1 (Hard Constrained),1,2.25,2.4,17.14,36.42,-11.84,-0.4
+1,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+1,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+1,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,23.65,34.39,-7.59,0.2
+1,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,23.65,34.2,-7.59,0.2
+2,Arterial->Residential,B0 (Unconstrained),1,20.2,1.72,31.11,49.91,0.0,-0.4
+2,Arterial->Residential,B1 (Hard Constrained),1,20.21,1.72,28.04,49.95,-0.02,-0.4
+2,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+2,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+2,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,40.33,49.89,0.45,0.3
+2,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,40.33,49.84,0.45,0.3
+3,Arterial->Residential,B0 (Unconstrained),1,0.71,0.0,46.59,22.13,0.0,-0.1
+3,Arterial->Residential,B1 (Hard Constrained),1,2.63,0.0,38.13,27.08,-18.28,-0.1
+3,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+3,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+3,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,31.02,24.24,-6.68,0.6
+3,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,31.02,10.36,-6.68,0.6
+4,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,50.51,30.03,0.0,0.5
+4,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,50.47,30.13,0.1,0.5
+4,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+4,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+4,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,41.74,29.62,1.5,0.5
+4,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,41.74,29.53,1.5,0.5
+5,Residential->Residential,B0 (Unconstrained),1,1.51,0.0,16.54,39.28,0.0,-0.4
+5,Residential->Residential,B1 (Hard Constrained),1,0.85,0.0,16.98,39.38,0.25,-0.4
+5,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+5,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+5,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,22.7,41.3,-5.89,0.2
+5,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,22.7,41.34,-5.89,0.2
+6,Residential->Residential,B0 (Unconstrained),1,0.84,0.0,18.58,31.32,0.0,-0.5
+6,Residential->Residential,B1 (Hard Constrained),1,1.09,0.0,38.32,36.18,-13.42,-0.5
+6,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+6,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+6,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+6,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+7,Residential->Residential,B0 (Unconstrained),1,7.11,0.23,34.04,30.98,0.0,-0.4
+7,Residential->Residential,B1 (Hard Constrained),1,7.41,0.24,23.98,30.27,2.36,-0.4
+7,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+7,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+7,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+7,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+8,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,43.47,21.78,0.0,3.5
+8,Arterial->Arterial,B1 (Hard Constrained),1,1.22,0.0,51.3,20.06,11.16,-0.2
+8,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+8,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+8,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+8,Arterial->Arterial,RoadFit-X (Cognitive Brain),0,,,,,,
+9,Arterial->Residential,B0 (Unconstrained),1,0.0,1.53,30.08,31.65,0.0,0.1
+9,Arterial->Residential,B1 (Hard Constrained),1,0.0,1.53,30.08,19.61,0.0,0.1
+9,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+9,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+9,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,1.53,30.08,31.93,0.0,0.1
+9,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,1.53,30.08,31.9,0.0,0.1
+10,Arterial->Residential,B0 (Unconstrained),1,0.0,7.22,11.84,48.66,0.0,0.1
+10,Arterial->Residential,B1 (Hard Constrained),1,0.0,7.22,11.84,48.44,0.0,0.1
+10,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+10,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+10,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,15.58,48.92,-1.39,0.3
+10,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,15.58,29.59,-1.39,0.3
+11,Residential->Residential,B0 (Unconstrained),1,1.36,4.3,15.8,14.82,0.0,-0.4
+11,Residential->Residential,B1 (Hard Constrained),1,4.81,3.4,29.74,14.36,2.79,-0.4
+11,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+11,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+11,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+11,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+12,Residential->Residential,B0 (Unconstrained),1,8.42,0.0,37.58,35.38,0.0,-0.4
+12,Residential->Residential,B1 (Hard Constrained),1,7.82,0.0,47.03,36.5,-2.39,-0.4
+12,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+12,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+12,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,41.03,35.91,-0.61,0.9
+12,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,41.03,21.95,-0.61,0.9
+13,Residential->Residential,B0 (Unconstrained),1,2.82,0.42,25.53,18.87,0.0,-0.4
+13,Residential->Residential,B1 (Hard Constrained),1,6.3,0.42,35.49,19.98,-5.22,-0.4
+13,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+13,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+13,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+13,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+14,Residential->Residential,B0 (Unconstrained),1,0.59,1.74,18.5,19.43,0.0,-0.2
+14,Residential->Residential,B1 (Hard Constrained),1,0.79,2.34,16.1,26.07,-25.67,-0.2
+14,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+14,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+14,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,29.06,27.57,-31.88,0.3
+14,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,29.06,27.67,-31.88,0.3
+15,Arterial->Residential,B0 (Unconstrained),1,2.92,0.0,40.9,18.25,0.0,-0.4
+15,Arterial->Residential,B1 (Hard Constrained),1,3.96,0.0,40.51,15.73,16.03,-0.4
+15,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+15,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+15,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+15,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+16,Arterial->Residential,B0 (Unconstrained),1,11.03,1.0,45.85,30.57,0.0,-0.4
+16,Arterial->Residential,B1 (Hard Constrained),1,9.35,1.0,45.98,35.61,-14.19,-0.4
+16,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+16,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+16,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,52.36,44.9,-31.76,1.1
+16,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,52.36,44.93,-31.76,1.1
+17,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,30.94,19.34,0.0,0.2
+17,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,28.82,20.01,-2.6,0.2
+17,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+17,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+17,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+17,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+18,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,85.67,18.3,0.0,2.0
+18,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,85.67,35.75,0.0,2.0
+18,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+18,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+18,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,85.67,18.37,0.0,2.0
+18,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,85.67,53.15,0.0,2.0
+19,Residential->Residential,B0 (Unconstrained),1,1.94,0.0,47.6,28.39,0.0,-0.4
+19,Residential->Residential,B1 (Hard Constrained),1,9.08,0.69,33.21,17.45,62.15,-0.4
+19,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+19,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+19,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+19,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+20,Arterial->Residential,B0 (Unconstrained),1,0.17,1.7,37.84,37.68,0.0,-0.1
+20,Arterial->Residential,B1 (Hard Constrained),1,2.51,0.0,47.05,49.81,-25.44,-0.4
+20,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+20,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+20,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,41.1,26.89,10.51,0.4
+20,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,41.1,33.47,10.51,0.4
+21,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,10.44,48.68,0.0,2.1
+21,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,18.41,57.39,-15.0,0.2
+21,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+21,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+21,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,10.44,48.78,0.0,2.1
+21,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,10.44,12.88,0.0,2.1
+22,Residential->Residential,B0 (Unconstrained),1,0.55,0.51,38.86,31.29,0.0,-0.3
+22,Residential->Residential,B1 (Hard Constrained),1,9.73,0.0,46.86,30.99,2.79,-0.4
+22,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+22,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+22,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.13,47.64,33.99,-6.61,0.1
+22,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.13,47.64,34.0,-6.61,0.1
+23,Residential->Residential,B0 (Unconstrained),1,3.84,0.0,59.08,39.89,0.0,-0.4
+23,Residential->Residential,B1 (Hard Constrained),1,1.77,0.0,44.28,42.44,-3.23,-0.4
+23,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+23,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+23,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,65.13,40.4,-0.09,0.5
+23,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,65.13,40.47,-0.09,0.5
+24,Residential->Residential,B0 (Unconstrained),1,5.01,0.0,31.2,24.68,0.0,-0.4
+24,Residential->Residential,B1 (Hard Constrained),1,3.18,0.0,31.06,21.98,11.89,-0.4
+24,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+24,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+24,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+24,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+25,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,30.32,54.7,0.0,1.9
+25,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,30.32,1.18,0.0,1.9
+25,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+25,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+25,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,30.32,1.18,0.0,1.9
+25,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,30.32,54.79,0.0,1.9
+26,Residential->Residential,B0 (Unconstrained),1,3.79,0.0,40.5,23.72,0.0,-0.4
+26,Residential->Residential,B1 (Hard Constrained),1,1.29,0.0,55.13,25.02,-9.66,-0.4
+26,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+26,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+26,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,54.58,25.43,-8.92,0.3
+26,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,54.58,25.39,-8.92,0.3
+27,Arterial->Residential,B0 (Unconstrained),1,1.61,0.0,36.63,25.57,0.0,-0.4
+27,Arterial->Residential,B1 (Hard Constrained),1,1.6,0.0,37.29,25.86,-1.16,-0.4
+27,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+27,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+27,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+27,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+28,Arterial->Residential,B0 (Unconstrained),1,2.55,0.49,25.21,22.04,0.0,-0.3
+28,Arterial->Residential,B1 (Hard Constrained),1,6.87,3.72,34.1,24.0,-6.99,-0.4
+28,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+28,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+28,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+28,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+29,Residential->Residential,B0 (Unconstrained),1,0.69,1.11,22.6,18.18,0.0,-0.4
+29,Residential->Residential,B1 (Hard Constrained),1,5.6,2.04,29.97,15.8,11.06,-0.4
+29,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+29,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+29,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+29,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+30,Arterial->Residential,B0 (Unconstrained),1,3.31,5.84,32.91,62.29,0.0,-0.4
+30,Arterial->Residential,B1 (Hard Constrained),1,1.38,5.81,26.54,63.12,0.55,-0.4
+30,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+30,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+30,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,37.98,51.67,-2.54,0.3
+30,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,37.98,26.66,-2.54,0.3
+31,Residential->Residential,B0 (Unconstrained),1,4.42,0.75,18.03,34.33,0.0,-0.4
+31,Residential->Residential,B1 (Hard Constrained),1,4.42,0.75,18.03,34.09,0.0,-0.4
+31,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+31,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+31,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.72,20.42,32.42,5.09,0.1
+31,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.72,20.42,31.93,5.09,0.1
+32,Arterial->Residential,B0 (Unconstrained),1,0.0,4.29,23.23,46.22,0.0,0.1
+32,Arterial->Residential,B1 (Hard Constrained),1,1.2,3.93,24.06,42.83,9.0,-0.2
+32,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+32,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+32,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,32.17,28.72,-2.5,0.3
+32,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,32.17,37.89,-2.5,0.3
+33,Arterial->Arterial,B0 (Unconstrained),1,2.96,1.07,29.13,47.41,0.0,-0.4
+33,Arterial->Arterial,B1 (Hard Constrained),1,2.97,1.07,31.73,47.62,-0.27,-0.4
+33,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+33,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+33,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+33,Arterial->Arterial,RoadFit-X (Cognitive Brain),0,,,,,,
+34,Arterial->Residential,B0 (Unconstrained),1,4.53,0.0,26.54,23.48,0.0,-0.4
+34,Arterial->Residential,B1 (Hard Constrained),1,4.69,0.0,25.42,24.33,-3.48,-0.4
+34,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+34,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+34,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,27.23,27.13,-11.52,0.2
+34,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,27.23,26.99,-11.52,0.2
+35,Residential->Residential,B0 (Unconstrained),1,4.81,0.0,47.54,24.86,0.0,-0.4
+35,Residential->Residential,B1 (Hard Constrained),1,9.71,0.0,43.23,25.28,-2.57,-0.4
+35,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+35,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+35,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+35,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+36,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,40.14,77.3,0.0,0.9
+36,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,40.14,77.48,0.0,0.9
+36,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+36,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+36,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,37.86,88.39,-12.55,2.9
+36,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,37.86,36.19,-12.55,2.9
+37,Residential->Residential,B0 (Unconstrained),1,0.87,0.0,23.76,24.32,0.0,-0.4
+37,Residential->Residential,B1 (Hard Constrained),1,6.83,0.0,22.47,25.74,-5.49,-0.4
+37,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+37,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+37,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+37,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+38,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,49.13,50.14,0.0,2.6
+38,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,24.05,34.08,49.18,0.8
+38,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+38,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+38,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,49.13,50.3,0.0,2.6
+38,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,49.13,50.12,0.0,2.6
+39,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,49.4,37.78,0.0,0.5
+39,Residential->Residential,B1 (Hard Constrained),1,2.6,0.0,41.48,45.04,-16.12,-0.4
+39,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+39,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+39,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,49.83,41.13,-7.9,0.5
+39,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,49.83,41.31,-7.9,0.5
+40,Arterial->Residential,B0 (Unconstrained),1,23.82,0.0,12.46,64.87,0.0,-0.4
+40,Arterial->Residential,B1 (Hard Constrained),1,23.82,0.0,12.46,64.88,0.0,-0.4
+40,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+40,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+40,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,37.72,57.46,13.36,0.5
+40,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,37.72,57.57,13.36,0.5
+41,Residential->Residential,B0 (Unconstrained),1,5.69,0.0,14.7,24.12,0.0,-0.2
+41,Residential->Residential,B1 (Hard Constrained),1,1.81,1.93,12.91,29.55,-17.17,-0.4
+41,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+41,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+41,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,23.37,26.76,-10.06,0.9
+41,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,23.37,26.69,-10.06,0.9
+42,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,51.01,31.21,0.0,0.9
+42,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,51.01,31.05,0.0,0.9
+42,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+42,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+42,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,36.43,34.5,-9.07,3.6
+42,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,36.43,34.51,-9.07,3.6
+43,Residential->Residential,B0 (Unconstrained),1,6.07,2.71,30.63,26.84,0.0,-0.4
+43,Residential->Residential,B1 (Hard Constrained),1,5.98,2.67,31.11,26.45,1.56,-0.4
+43,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+43,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+43,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+43,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+44,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,42.38,19.49,0.0,0.2
+44,Residential->Residential,B1 (Hard Constrained),1,3.23,0.0,47.76,21.28,-11.3,-0.4
+44,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+44,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+44,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+44,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+45,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,4.77,32.04,0.0,3.6
+45,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,22.28,89.9,-64.71,0.2
+45,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+45,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+45,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,28.57,58.05,-66.96,4.1
+45,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,28.57,76.94,-66.96,4.1
+46,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,53.55,24.3,0.0,2.4
+46,Arterial->Arterial,B1 (Hard Constrained),1,1.27,0.0,48.23,24.2,2.19,-0.4
+46,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+46,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+46,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,46.37,23.99,1.63,2.6
+46,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,46.37,23.84,1.63,2.6
+47,Arterial->Arterial,B0 (Unconstrained),1,1.65,0.0,30.89,33.56,0.0,-0.4
+47,Arterial->Arterial,B1 (Hard Constrained),1,19.04,1.08,26.36,30.92,7.2,-0.4
+47,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+47,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+47,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,29.85,32.73,1.68,2.8
+47,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,29.85,32.93,1.68,2.8
+48,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,22.15,31.21,0.0,0.2
+48,Residential->Residential,B1 (Hard Constrained),1,1.22,0.0,31.83,27.6,16.88,-0.1
+48,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+48,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+48,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,25.84,32.79,-5.03,0.6
+48,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,25.84,32.59,-5.03,0.6
+49,Arterial->Arterial,B0 (Unconstrained),1,4.19,0.7,42.51,22.74,0.0,-0.4
+49,Arterial->Arterial,B1 (Hard Constrained),1,4.3,0.72,40.47,23.42,-2.88,-0.4
+49,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+49,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+49,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+49,Arterial->Arterial,RoadFit-X (Cognitive Brain),0,,,,,,
+50,Residential->Residential,B0 (Unconstrained),1,1.71,0.0,28.15,34.79,0.0,-0.2
+50,Residential->Residential,B1 (Hard Constrained),1,1.71,0.0,28.15,34.79,0.0,-0.2
+50,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+50,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+50,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,38.84,25.92,37.18,0.8
+50,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,38.84,25.75,37.18,0.8
+51,Residential->Residential,B0 (Unconstrained),1,0.45,0.42,33.63,22.76,0.0,-0.3
+51,Residential->Residential,B1 (Hard Constrained),1,5.76,0.0,31.84,25.57,-9.38,-0.4
+51,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+51,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+51,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,38.76,24.61,-5.28,0.6
+51,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,38.76,24.62,-5.28,0.6
+52,Arterial->Residential,B0 (Unconstrained),1,0.76,0.0,35.76,51.59,0.0,-0.4
+52,Arterial->Residential,B1 (Hard Constrained),1,0.76,0.0,35.76,51.59,0.0,-0.4
+52,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+52,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+52,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,30.05,42.83,21.92,0.8
+52,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,30.05,42.77,21.92,0.8
+53,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,0.0,83.45,0.0,2.7
+53,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,0.0,0.97,0.0,2.7
+53,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+53,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+53,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,0.0,42.2,0.0,2.7
+53,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,0.0,42.37,0.0,2.7
+54,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,70.06,54.19,0.0,0.5
+54,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,70.04,53.92,0.34,0.5
+54,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+54,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+54,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,63.15,57.65,-6.24,0.5
+54,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,63.15,57.55,-6.24,0.5
+55,Arterial->Residential,B0 (Unconstrained),1,1.15,0.0,21.23,56.27,0.0,-0.4
+55,Arterial->Residential,B1 (Hard Constrained),1,1.15,0.0,21.23,56.11,0.0,-0.4
+55,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+55,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+55,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,21.74,38.22,-12.34,0.5
+55,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,21.74,50.42,-12.34,0.5
+56,Residential->Residential,B0 (Unconstrained),1,1.47,0.0,27.64,27.34,0.0,-0.4
+56,Residential->Residential,B1 (Hard Constrained),1,9.31,0.0,39.28,24.04,13.52,-0.4
+56,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+56,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+56,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,30.06,26.84,3.43,0.2
+56,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,30.06,26.79,3.43,0.2
+57,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,80.72,61.82,0.0,1.5
+57,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,80.72,1.27,0.0,1.5
+57,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+57,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+57,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,80.72,122.45,0.0,1.5
+57,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,80.72,1.37,0.0,1.5
+58,Residential->Residential,B0 (Unconstrained),1,0.26,1.7,35.37,19.81,0.0,-0.4
+58,Residential->Residential,B1 (Hard Constrained),1,6.06,1.95,33.22,36.74,-46.09,-0.4
+58,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+58,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+58,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.83,31.83,35.57,-43.59,0.1
+58,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.83,31.83,35.8,-43.59,0.1
+59,Arterial->Residential,B0 (Unconstrained),1,2.43,3.54,30.45,73.63,0.0,-0.4
+59,Arterial->Residential,B1 (Hard Constrained),1,2.42,3.53,43.14,73.54,0.14,-0.4
+59,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+59,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+59,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,3.3,31.86,41.75,7.19,0.1
+59,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,3.3,31.86,68.35,7.19,0.1
+60,Arterial->Residential,B0 (Unconstrained),1,5.7,0.0,23.89,36.77,0.0,-0.4
+60,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,32.6,42.29,-13.77,0.5
+60,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+60,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+60,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,49.97,41.85,-13.0,1.5
+60,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,49.97,41.72,-13.0,1.5
+61,Arterial->Residential,B0 (Unconstrained),1,1.98,0.0,33.47,31.49,0.0,-0.4
+61,Arterial->Residential,B1 (Hard Constrained),1,2.9,0.0,24.22,31.33,1.05,-0.4
+61,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+61,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+61,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,34.93,31.76,-2.01,0.5
+61,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,34.93,31.6,-2.01,0.5
+62,Arterial->Residential,B0 (Unconstrained),1,0.0,4.89,36.05,43.33,0.0,0.1
+62,Arterial->Residential,B1 (Hard Constrained),1,4.85,0.0,37.35,43.82,-0.13,-0.4
+62,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+62,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+62,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,33.1,43.02,-0.47,0.3
+62,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,33.1,26.58,-0.47,0.3
+63,Arterial->Arterial,B0 (Unconstrained),1,2.45,0.0,58.53,32.71,0.0,-0.4
+63,Arterial->Arterial,B1 (Hard Constrained),1,8.66,0.0,53.65,31.96,1.67,-0.4
+63,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+63,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+63,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,56.12,34.75,-6.33,2.6
+63,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,56.12,34.57,-6.33,2.6
+64,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,16.96,22.38,0.0,2.6
+64,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,15.64,23.55,-4.65,2.6
+64,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+64,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+64,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,21.38,31.62,-29.04,2.6
+64,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,21.38,31.6,-29.04,2.6
+65,Residential->Residential,B0 (Unconstrained),1,0.83,0.3,26.05,14.01,0.0,-0.4
+65,Residential->Residential,B1 (Hard Constrained),1,0.89,0.32,23.56,14.94,-6.05,-0.4
+65,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+65,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+65,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+65,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+66,Arterial->Residential,B0 (Unconstrained),1,20.64,0.0,14.76,168.42,0.0,-0.4
+66,Arterial->Residential,B1 (Hard Constrained),1,24.35,6.71,4.32,198.35,-15.24,-0.4
+66,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+66,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+66,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,14.6,83.92,61.26,0.2
+66,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,14.6,104.52,61.26,0.2
+67,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,49.45,47.83,0.0,0.6
+67,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,17.47,93.99,-0.72,0.6
+67,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+67,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+67,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,20.33,47.86,-1.0,0.9
+67,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,20.33,1.66,-1.0,0.9
+68,Residential->Residential,B0 (Unconstrained),1,1.41,0.0,37.95,28.9,0.0,-0.4
+68,Residential->Residential,B1 (Hard Constrained),1,1.81,0.0,51.03,29.2,-1.61,-0.4
+68,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+68,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+68,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+68,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+69,Residential->Residential,B0 (Unconstrained),1,0.0,0.53,25.59,23.11,0.0,0.1
+69,Residential->Residential,B1 (Hard Constrained),1,4.49,1.38,17.62,22.61,1.92,-0.4
+69,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+69,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+69,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+69,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+70,Arterial->Residential,B0 (Unconstrained),1,1.85,1.89,18.28,30.28,0.0,-0.4
+70,Arterial->Residential,B1 (Hard Constrained),1,1.85,1.89,18.28,30.42,0.0,-0.4
+70,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+70,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+70,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,25.98,29.24,1.12,0.7
+70,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,25.98,29.38,1.12,0.7
+71,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,29.48,32.29,0.0,2.6
+71,Residential->Residential,B1 (Hard Constrained),1,4.09,0.0,31.05,33.47,-3.77,-0.2
+71,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+71,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+71,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,23.17,32.29,0.39,1.9
+71,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,23.17,32.3,0.39,1.9
+72,Residential->Residential,B0 (Unconstrained),1,3.19,2.31,17.91,20.04,0.0,-0.4
+72,Residential->Residential,B1 (Hard Constrained),1,4.73,0.96,25.63,21.5,-6.82,-0.4
+72,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+72,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+72,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+72,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+73,Arterial->Residential,B0 (Unconstrained),1,0.0,1.22,18.42,53.06,0.0,0.1
+73,Arterial->Residential,B1 (Hard Constrained),1,0.0,1.33,15.46,57.69,-7.86,0.1
+73,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+73,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+73,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,1.33,15.46,57.9,-7.86,0.1
+73,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,1.33,15.46,24.14,-7.86,0.1
+74,Arterial->Arterial,B0 (Unconstrained),1,3.06,0.0,40.8,19.47,0.0,-0.4
+74,Arterial->Arterial,B1 (Hard Constrained),1,5.8,0.0,41.41,20.86,-7.44,-0.4
+74,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+74,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+74,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,22.29,19.08,-20.19,2.6
+74,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,22.29,23.68,-20.19,2.6
+75,Residential->Residential,B0 (Unconstrained),1,7.32,0.0,11.31,35.04,0.0,-0.1
+75,Residential->Residential,B1 (Hard Constrained),1,6.97,0.0,27.54,36.13,-3.02,-0.1
+75,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+75,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+75,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,13.08,28.35,26.15,0.6
+75,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,13.08,28.12,26.15,0.6
+76,Arterial->Residential,B0 (Unconstrained),1,3.26,0.0,45.85,30.11,0.0,-0.4
+76,Arterial->Residential,B1 (Hard Constrained),1,8.74,0.0,41.68,30.65,-2.6,-0.4
+76,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+76,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+76,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,47.29,31.75,-6.19,1.1
+76,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,47.29,31.97,-6.19,1.1
+77,Arterial->Arterial,B0 (Unconstrained),1,0.93,0.0,38.31,48.43,0.0,-0.4
+77,Arterial->Arterial,B1 (Hard Constrained),1,2.6,0.0,36.61,48.47,-0.05,-0.4
+77,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+77,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+77,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,26.42,56.25,-30.9,2.6
+77,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,26.42,42.48,-30.9,2.6
+78,Residential->Residential,B0 (Unconstrained),1,2.92,0.25,18.71,22.66,0.0,-0.4
+78,Residential->Residential,B1 (Hard Constrained),1,3.89,0.0,41.1,25.14,-9.87,-0.4
+78,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+78,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+78,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+78,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+79,Residential->Residential,B0 (Unconstrained),1,1.26,2.97,27.26,33.13,0.0,-0.4
+79,Residential->Residential,B1 (Hard Constrained),1,3.17,2.98,26.67,33.12,-0.06,-0.4
+79,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+79,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+79,Residential->Residential,RoadFit-X (Exploratory),1,0.0,1.94,28.66,40.57,-21.15,0.1
+79,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,1.94,28.66,40.75,-21.15,0.1
+80,Arterial->Residential,B0 (Unconstrained),1,1.65,0.0,46.82,29.85,0.0,-0.3
+80,Arterial->Residential,B1 (Hard Constrained),1,4.18,0.0,31.96,23.14,25.26,-0.4
+80,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+80,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+80,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,41.77,29.06,-0.28,0.5
+80,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,41.77,29.0,-0.28,0.5
+81,Arterial->Residential,B0 (Unconstrained),1,10.35,2.33,51.27,44.74,0.0,-0.4
+81,Arterial->Residential,B1 (Hard Constrained),1,10.9,2.45,39.66,43.25,3.4,-0.4
+81,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+81,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+81,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,54.47,42.3,6.47,1.3
+81,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,54.47,42.39,6.47,1.3
+82,Arterial->Residential,B0 (Unconstrained),1,4.99,0.0,36.66,70.1,0.0,-0.4
+82,Arterial->Residential,B1 (Hard Constrained),1,18.39,0.0,25.45,63.6,8.2,-0.4
+82,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+82,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+82,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,30.51,41.69,0.96,0.2
+82,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,30.51,1.32,0.96,0.2
+83,Arterial->Arterial,B0 (Unconstrained),1,6.37,0.0,46.73,60.79,0.0,-0.4
+83,Arterial->Arterial,B1 (Hard Constrained),1,6.37,0.0,46.73,60.75,0.0,-0.4
+83,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+83,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+83,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,56.34,68.63,-10.9,0.4
+83,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,56.34,55.4,-10.9,0.4
+84,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,36.89,22.66,0.0,0.6
+84,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,41.75,22.95,-2.48,0.6
+84,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+84,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+84,Arterial->Arterial,RoadFit-X (Exploratory),0,,,,,,
+84,Arterial->Arterial,RoadFit-X (Cognitive Brain),0,,,,,,
+85,Arterial->Residential,B0 (Unconstrained),1,1.81,0.0,31.82,40.34,0.0,-0.4
+85,Arterial->Residential,B1 (Hard Constrained),1,1.23,0.0,29.88,45.87,-9.57,-0.2
+85,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+85,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+85,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,33.29,56.88,-28.89,0.3
+85,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,33.29,56.74,-28.89,0.3
+86,Arterial->Residential,B0 (Unconstrained),1,2.25,0.0,38.46,25.35,0.0,-0.4
+86,Arterial->Residential,B1 (Hard Constrained),1,2.33,0.0,30.64,25.07,1.7,-0.4
+86,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+86,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+86,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+86,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+87,Residential->Residential,B0 (Unconstrained),1,6.99,0.0,46.27,23.38,0.0,-0.4
+87,Residential->Residential,B1 (Hard Constrained),1,6.91,0.0,44.89,23.39,0.27,-0.4
+87,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+87,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+87,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+87,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+88,Arterial->Residential,B0 (Unconstrained),1,0.0,0.0,45.82,29.89,0.0,1.5
+88,Arterial->Residential,B1 (Hard Constrained),1,1.1,5.79,39.02,40.4,-24.86,-0.4
+88,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+88,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+88,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,27.92,41.72,-28.06,0.4
+88,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,27.92,41.67,-28.06,0.4
+89,Residential->Residential,B0 (Unconstrained),1,0.0,0.0,36.12,28.93,0.0,1.1
+89,Residential->Residential,B1 (Hard Constrained),1,0.0,0.0,39.12,25.42,-8.46,1.1
+89,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+89,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+89,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,39.12,31.71,-8.46,1.1
+89,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,39.12,31.6,-8.46,1.1
+90,Arterial->Residential,B0 (Unconstrained),1,3.44,0.0,30.25,27.06,0.0,-0.3
+90,Arterial->Residential,B1 (Hard Constrained),1,3.64,0.0,29.44,28.37,-5.48,-0.3
+90,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+90,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+90,Arterial->Residential,RoadFit-X (Exploratory),0,,,,,,
+90,Arterial->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+91,Arterial->Residential,B0 (Unconstrained),1,2.62,4.64,34.33,49.58,0.0,-0.4
+91,Arterial->Residential,B1 (Hard Constrained),1,1.1,4.62,29.27,50.64,0.43,-0.4
+91,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+91,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+91,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,38.03,41.72,-4.78,0.3
+91,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,38.03,52.11,-4.78,0.3
+92,Residential->Residential,B0 (Unconstrained),1,0.8,1.94,27.45,21.52,0.0,-0.4
+92,Residential->Residential,B1 (Hard Constrained),1,6.46,1.82,35.05,21.91,-5.43,-0.4
+92,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+92,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+92,Residential->Residential,RoadFit-X (Exploratory),0,,,,,,
+92,Residential->Residential,RoadFit-X (Cognitive Brain),0,,,,,,
+93,Arterial->Residential,B0 (Unconstrained),1,1.85,0.0,40.4,30.15,0.0,-0.4
+93,Arterial->Residential,B1 (Hard Constrained),1,1.74,0.0,54.96,32.44,-7.63,-0.4
+93,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+93,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+93,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,30.43,24.33,21.47,0.4
+93,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,30.43,24.2,21.47,0.4
+94,Residential->Residential,B0 (Unconstrained),1,5.92,0.0,30.18,35.8,0.0,-0.4
+94,Residential->Residential,B1 (Hard Constrained),1,6.22,1.74,27.13,37.55,-4.74,-0.4
+94,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+94,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+94,Residential->Residential,RoadFit-X (Exploratory),1,0.0,1.59,19.21,14.22,8.45,0.1
+94,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,1.59,19.21,33.69,8.45,0.1
+95,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,22.18,24.03,0.0,0.2
+95,Arterial->Arterial,B1 (Hard Constrained),1,4.43,1.66,15.55,24.67,-3.99,-0.4
+95,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+95,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+95,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,26.56,24.64,-2.94,2.9
+95,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,26.56,24.71,-2.94,2.9
+96,Arterial->Arterial,B0 (Unconstrained),1,0.0,0.0,33.56,26.03,0.0,0.2
+96,Arterial->Arterial,B1 (Hard Constrained),1,0.0,0.0,30.87,109.94,-9.61,0.2
+96,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+96,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+96,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,48.14,108.98,-31.67,2.6
+96,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,48.14,73.17,-31.67,2.6
+97,Arterial->Residential,B0 (Unconstrained),1,4.3,0.0,22.25,108.1,0.0,-0.4
+97,Arterial->Residential,B1 (Hard Constrained),1,0.0,0.0,13.38,44.04,0.82,0.2
+97,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+97,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+97,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,26.62,39.71,12.04,0.7
+97,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,26.62,20.53,12.04,0.7
+98,Arterial->Arterial,B0 (Unconstrained),1,3.3,0.0,48.95,42.55,0.0,-0.2
+98,Arterial->Arterial,B1 (Hard Constrained),1,3.3,0.0,48.95,42.54,0.0,-0.2
+98,Arterial->Arterial,RoadFit-X (Strict),0,,,,,,
+98,Arterial->Arterial,RoadFit-X (Conservative),0,,,,,,
+98,Arterial->Arterial,RoadFit-X (Exploratory),1,0.0,0.0,45.92,28.2,-7.58,1.1
+98,Arterial->Arterial,RoadFit-X (Cognitive Brain),1,0.0,0.0,45.92,46.33,-7.58,1.1
+99,Residential->Residential,B0 (Unconstrained),1,2.53,0.0,29.91,24.22,0.0,-0.3
+99,Residential->Residential,B1 (Hard Constrained),1,6.72,0.0,30.01,24.57,-1.82,-0.4
+99,Residential->Residential,RoadFit-X (Strict),0,,,,,,
+99,Residential->Residential,RoadFit-X (Conservative),0,,,,,,
+99,Residential->Residential,RoadFit-X (Exploratory),1,0.0,0.0,34.41,25.88,-5.59,0.3
+99,Residential->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,34.41,25.81,-5.59,0.3
+100,Arterial->Residential,B0 (Unconstrained),1,2.04,3.07,24.59,66.45,0.0,-0.1
+100,Arterial->Residential,B1 (Hard Constrained),1,0.0,3.05,17.85,66.37,0.58,0.1
+100,Arterial->Residential,RoadFit-X (Strict),0,,,,,,
+100,Arterial->Residential,RoadFit-X (Conservative),0,,,,,,
+100,Arterial->Residential,RoadFit-X (Exploratory),1,0.0,0.0,29.17,36.1,11.18,2.0
+100,Arterial->Residential,RoadFit-X (Cognitive Brain),1,0.0,0.0,29.17,24.48,11.18,2.0

@@ -172,10 +172,24 @@ export default function App() {
     setShowDestDrop(false);
   };
 
-  const handleMapClick = e => {
+  const handleMapClick = async e => {
     const c = { lon: e.lngLat.lng, lat: e.lngLat.lat };
     if (!origin) { setOrigin(c); setOrigQuery('📍 Map pin (origin)'); }
     else if (!destination) { setDestination(c); setDestQuery('📍 Map pin (destination)'); }
+    else {
+      // Add roadblock to Working Memory
+      try {
+        const res = await fetch('http://localhost:8000/brain/roadblock', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ lat: c.lat, lon: c.lon, severity: 1.0 })
+        });
+        const data = await res.json();
+        alert(data.message);
+      } catch (err) {
+        console.error("Failed to add roadblock", err);
+      }
+    }
   };
 
   const handleTrainBrain = async () => {
@@ -191,6 +205,18 @@ export default function App() {
         setTrainingBrain(false);
         setBrainMsg('');
       }, 7000);
+    }
+  };
+
+  const handleConsolidateBrain = async () => {
+    try {
+      const res = await fetch('http://localhost:8000/brain/consolidate', {
+        method: 'POST'
+      });
+      const data = await res.json();
+      alert(data.message);
+    } catch (err) {
+      alert("API Error");
     }
   };
 
@@ -399,16 +425,30 @@ export default function App() {
           <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
             Simulate 20,000 routes across contextual environments to learn historical failure points (uses CPU multiprocessing).
           </p>
-          <button 
-            onClick={handleTrainBrain} 
-            disabled={trainingBrain}
-            style={{
-              width: '100%', padding: '8px', borderRadius: '8px', border: 'none', cursor: 'pointer',
-              background: trainingBrain ? '#475569' : 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
-              color: 'white', fontWeight: 'bold', fontSize: 12, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6
-            }}>
-            {trainingBrain ? <><Loader2 size={14} className="spinner"/> Training in progress...</> : '🧠 Train Brain (20,000 Combinations)'}
-          </button>
+          <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
+            <span style={{color: '#f9a8d4'}}>Working Memory:</span> Click the map (after setting Orig/Dest) to simulate a live roadblock (15min TTL).
+          </p>
+          <div style={{ display: 'flex', gap: '8px' }}>
+            <button 
+              onClick={handleTrainBrain} 
+              disabled={trainingBrain}
+              style={{
+                flex: 1, padding: '8px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                background: trainingBrain ? '#475569' : 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
+                color: 'white', fontWeight: 'bold', fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 4
+              }}>
+              {trainingBrain ? <><Loader2 size={12} className="spinner"/> Training...</> : '🧠 Train Brain (20k)'}
+            </button>
+            <button 
+              onClick={handleConsolidateBrain} 
+              style={{
+                flex: 1, padding: '8px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+                background: 'linear-gradient(135deg, #8b5cf6 0%, #6d28d9 100%)',
+                color: 'white', fontWeight: 'bold', fontSize: 11, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 4
+              }}>
+              🌌 ML Consolidation
+            </button>
+          </div>
           {brainMsg && (
             <div className="fade-in" style={{ fontSize: 11, color: '#f9a8d4', marginTop: 8, textAlign: 'center' }}>
               {brainMsg}

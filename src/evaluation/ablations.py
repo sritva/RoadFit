@@ -21,6 +21,7 @@ from src.evaluation.baseline_routes import (
 from src.routing.pareto_candidates import get_k_shortest_paths
 from src.routing.risk_aware_router import route_risk_aware, _compute_path_stats
 from src.evaluation.metrics_engine import MetricsEngine
+from src.brain.cognitive_core import CognitiveCore
 
 def extract_path_edges(G, path_nodes):
     path_edges = []
@@ -107,6 +108,19 @@ def run_all_ablations(G: nx.MultiDiGraph, vehicle: VehicleDigitalTwin, orig_node
     if edges_rf_exp:
         res_rfe = engine.evaluate_route(G, path_rf_exp, edges_rf_exp, t_rf_exp, t_b0)
         results["RoadFit-X (Exploratory)"] = res_rfe
+        
+    # ---------------------------------------------------------
+    # RoadFit-X: Cognitive Brain (Episodic Memory + Exploratory)
+    # ---------------------------------------------------------
+    # Assuming brain is already trained, we inject its bias for a 'rain' and 'peak' context
+    brain = CognitiveCore()
+    biased_graph = brain.apply_cognitive_bias(G, weather="rain", traffic="peak", vehicle_type=vehicle.vehicle_type)
+    
+    path_rf_brain, edges_rf_brain, _ = route_risk_aware(biased_graph, orig_node, dest_node, vehicle)
+    t_rf_brain = get_path_travel_time(edges_rf_brain)
+    if edges_rf_brain:
+        res_rfb = engine.evaluate_route(biased_graph, path_rf_brain, edges_rf_brain, t_rf_brain, t_b0)
+        results["RoadFit-X (Cognitive Brain)"] = res_rfb
     
     # Print Results Matrix
     print(f"{'Router':<25} | {'ISER %':<8} | {'CNME %':<8} | {'MDEF %':<8} | {'TRR':<6} | {'ETTP %':<8}")
@@ -199,7 +213,7 @@ def run_experiment(G, vehicle, num_pairs, output_csv):
     pairs = sample_stratified_od_pairs(G, n_art_res, n_res_res, n_art_art)
     
     records = []
-    models = ["B0 (Unconstrained)", "B1 (Hard Constrained)", "RoadFit-X (Strict)", "RoadFit-X (Conservative)", "RoadFit-X (Exploratory)"]
+    models = ["B0 (Unconstrained)", "B1 (Hard Constrained)", "RoadFit-X (Strict)", "RoadFit-X (Conservative)", "RoadFit-X (Exploratory)", "RoadFit-X (Cognitive Brain)"]
     
     print(f"Executing {num_pairs} pairs and saving to {output_csv}...\n")
     
