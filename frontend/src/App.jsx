@@ -180,9 +180,9 @@ export default function App() {
 
   const handleTrainBrain = async () => {
     setTrainingBrain(true);
-    setBrainMsg('Brain entering REM sleep... simulating 1000 combinations.');
+    setBrainMsg('Brain spinning up multiprocessing... simulating 20,000 combinations.');
     try {
-      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=1000`);
+      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=20000`);
       setBrainMsg(res.data.message);
     } catch(err) {
       setBrainMsg('Brain training failed.');
@@ -228,6 +228,7 @@ export default function App() {
         avg_speed: sr.avg_speed_kmh,
         rain: sr.rain_level,
         traffic: sr.traffic_level,
+        ensembleWinner: sr.ensemble_winner,
         metrics: sr.academic_metrics || {}
       });
       setRouteDetails(res.data);
@@ -396,7 +397,7 @@ export default function App() {
             <Brain size={14} /> Cognitive Routing Core (Episodic Memory)
           </label>
           <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
-            Simulate 1000 routes across contextual environments to learn historical failure points (e.g. flooded alleys).
+            Simulate 20,000 routes across contextual environments to learn historical failure points (uses CPU multiprocessing).
           </p>
           <button 
             onClick={handleTrainBrain} 
@@ -406,7 +407,7 @@ export default function App() {
               background: trainingBrain ? '#475569' : 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
               color: 'white', fontWeight: 'bold', fontSize: 12, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6
             }}>
-            {trainingBrain ? <><Loader2 size={14} className="spinner"/> Training in progress...</> : '🧠 Train Brain (1000 Combinations)'}
+            {trainingBrain ? <><Loader2 size={14} className="spinner"/> Training in progress...</> : '🧠 Train Brain (20,000 Combinations)'}
           </button>
           {brainMsg && (
             <div className="fade-in" style={{ fontSize: 11, color: '#f9a8d4', marginTop: 8, textAlign: 'center' }}>
@@ -495,6 +496,13 @@ export default function App() {
                 <StatRow label="MDEF (Missing Data)" value={`${routeStats.metrics['MDEF_%']}%`} />
                 <StatRow label="ISER (Safety Exposure)" value={`${routeStats.metrics['ISER_%']}%`} />
               </div>
+
+              {routeStats.ensembleWinner && (
+                <div style={{ marginTop: 12, padding: '8px', borderRadius: '8px', background: 'rgba(236,72,153,0.1)', border: '1px solid rgba(236,72,153,0.3)' }}>
+                  <div style={{ fontSize: 11, color: '#f9a8d4', marginBottom: 2 }}>🏆 Dynamic Ensemble Selection</div>
+                  <div style={{ fontSize: 13, fontWeight: 'bold', color: '#ec4899' }}>{routeStats.ensembleWinner}</div>
+                </div>
+              )}
               
               <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#94a3b8', marginTop: 12 }}>
                 <div style={{ width: 12, height: 12, borderRadius: 2, background: '#ef4444' }} /> Baseline (B0)

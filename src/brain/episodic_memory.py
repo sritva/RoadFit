@@ -2,7 +2,7 @@ import os
 import sqlite3
 import json
 import threading
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Tuple
 
 class EpisodicMemoryBank:
     """
@@ -25,6 +25,8 @@ class EpisodicMemoryBank:
 
     def _init_db(self, conn):
         c = conn.cursor()
+        c.execute('PRAGMA journal_mode=WAL;') # Enable concurrent reads/writes
+        c.execute('PRAGMA synchronous=NORMAL;')
         # edge_id is stored as string: f"{u}_{v}_{k}"
         c.execute('''
             CREATE TABLE IF NOT EXISTS experiences (
@@ -60,6 +62,19 @@ class EpisodicMemoryBank:
             INSERT INTO experiences (edge_id, weather, traffic, vehicle_type, success, actual_time)
             VALUES (?, ?, ?, ?, ?, ?)
         ''', (edge_id, weather, traffic, vehicle_type, int(success), actual_time))
+        conn.commit()
+
+    def commit_experiences_batch(self, experiences: List[Tuple]):
+        """
+        Records multiple edge traversal outcomes in episodic memory efficiently.
+        experiences is a list of tuples: (edge_id, weather, traffic, vehicle_type, success, actual_time)
+        """
+        conn = self._get_conn()
+        c = conn.cursor()
+        c.executemany('''
+            INSERT INTO experiences (edge_id, weather, traffic, vehicle_type, success, actual_time)
+            VALUES (?, ?, ?, ?, ?, ?)
+        ''', experiences)
         conn.commit()
 
     def recall_edge_penalties(self, weather: str, traffic: str, vehicle_type: str) -> Dict[str, float]:

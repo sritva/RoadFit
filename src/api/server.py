@@ -263,20 +263,42 @@ def route_plan(request: CoordinateRequest):
             traffic_level=traffic,
         )
     else:
-        print(f"Standard A* mode: rain={rain}, traffic={traffic}, policy={request.unknown_data_policy}")
+        print(f"Ensemble A* mode: rain={rain}, traffic={traffic}, policy={request.unknown_data_policy}")
         
-        # Inject Episodic Memory bias into the graph based on context
-        biased_graph = BRAIN.apply_cognitive_bias(active_graph, rain, traffic, vehicle.vehicle_type)
-        
-        rf_nodes, rf_edges, rf_stats = route_risk_aware(
-            G=biased_graph,
-            orig_node=orig_node,
-            dest_node=dest_node,
-            vehicle=vehicle,
-            provenance=PROVENANCE,
-            rain_level=rain,
-            traffic_level=traffic,
+        # Mechanism 1: Pure Heuristics (No Memory)
+        h_nodes, h_edges, h_stats = route_risk_aware(
+            G=active_graph, orig_node=orig_node, dest_node=dest_node,
+            vehicle=vehicle, provenance=PROVENANCE, rain_level=rain, traffic_level=traffic
         )
+        
+        # Mechanism 2: Cognitive Bias (Episodic Memory)
+        biased_graph = BRAIN.apply_cognitive_bias(active_graph, rain, traffic, vehicle.vehicle_type)
+        b_nodes, b_edges, b_stats = route_risk_aware(
+            G=biased_graph, orig_node=orig_node, dest_node=dest_node,
+            vehicle=vehicle, provenance=PROVENANCE, rain_level=rain, traffic_level=traffic
+        )
+        
+        # Ensemble Selection Logic:
+        # Compare expected travel time adjusted by survival probability (ETA / P_survival)
+        # Lower is better.
+        def _score(stats):
+            if not stats: return float('inf')
+            p = stats.get('completion_probability', 0.001)
+            eta = stats.get('eta_seconds', 999999)
+            return eta / max(p, 0.001)
+
+        score_h = _score(h_stats)
+        score_b = _score(b_stats)
+
+        ensemble_winner = ""
+        if b_nodes and score_b <= score_h:
+            rf_nodes, rf_edges, rf_stats = b_nodes, b_edges, b_stats
+            ensemble_winner = "Cognitive Core (Brain Memory)"
+        elif h_nodes:
+            rf_nodes, rf_edges, rf_stats = h_nodes, h_edges, h_stats
+            ensemble_winner = "Pure Physics Heuristics"
+        else:
+            rf_nodes, rf_edges, rf_stats = None, None, None
 
     if rf_nodes is None or rf_edges is None or len(rf_nodes) < 2:
         raise HTTPException(
@@ -342,6 +364,7 @@ def route_plan(request: CoordinateRequest):
             "avg_speed_kmh": round(rf_stats.get('avg_speed_kmh', 25.0), 1),
             "rain_level": rain,
             "traffic_level": traffic,
+            "ensemble_winner": ensemble_winner if not request.simulate_congestion else "CVaR Optimiser",
             "academic_metrics": academic_metrics
         },
         "baseline_route": {
