@@ -194,6 +194,12 @@ def route_risk_aware_multilabel(
                     data, vehicle, provenance, (u, v), rain_level, traffic_level
                 )
                 
+                # Apply Cognitive Bias (Episodic Memory override)
+                if '_history_penalty' in data and data['_history_penalty'] > 0.0:
+                    penalty_factor = 1.0 - (data['_history_penalty'] * 0.99)
+                    p_e *= penalty_factor
+                    u_e += (data['_history_penalty'] * 1000.0)
+                    
                 if p_e < 0.01:
                     continue  # Untraversable
                 

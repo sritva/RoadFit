@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Map, { NavigationControl, Source, Layer, Marker } from 'react-map-gl/maplibre';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import axios from 'axios';
-import { Search, MapPin, Navigation, Loader2, Info, CloudRain, Car, AlertTriangle, CheckCircle, Zap } from 'lucide-react';
+import { Search, MapPin, Navigation, Loader2, Info, CloudRain, Car, AlertTriangle, CheckCircle, Zap, Brain } from 'lucide-react';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
 
@@ -140,6 +140,9 @@ export default function App() {
   const [dataPolicy, setDataPolicy] = useState('exploratory');
   const [baselineGeojson, setBaselineGeojson] = useState(null);
   const [errorMsg, setErrorMsg] = useState(null);
+  
+  const [trainingBrain, setTrainingBrain] = useState(false);
+  const [brainMsg, setBrainMsg] = useState('');
 
   const debouncedOrig = useDebounce(origQuery, 450);
   const debouncedDest = useDebounce(destQuery, 450);
@@ -175,7 +178,21 @@ export default function App() {
     else if (!destination) { setDestination(c); setDestQuery('📍 Map pin (destination)'); }
   };
 
-
+  const handleTrainBrain = async () => {
+    setTrainingBrain(true);
+    setBrainMsg('Brain entering REM sleep... simulating 1000 combinations.');
+    try {
+      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=1000`);
+      setBrainMsg(res.data.message);
+    } catch(err) {
+      setBrainMsg('Brain training failed.');
+    } finally {
+      setTimeout(() => {
+        setTrainingBrain(false);
+        setBrainMsg('');
+      }, 7000);
+    }
+  };
 
   const calculateRoute = async () => {
     if (!origin || !destination) return;
@@ -371,6 +388,31 @@ export default function App() {
                 }}>{p}</button>
             ))}
           </div>
+        </div>
+
+        {/* Cognitive Core (The Brain) */}
+        <div className="form-group" style={{ background: 'rgba(236,72,153,0.05)', padding: '12px', borderRadius: '12px', border: '1px solid rgba(236,72,153,0.2)' }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: 6, color: '#f472b6' }}>
+            <Brain size={14} /> Cognitive Routing Core (Episodic Memory)
+          </label>
+          <p style={{ fontSize: 11, color: '#94a3b8', marginTop: 4, marginBottom: 10 }}>
+            Simulate 1000 routes across contextual environments to learn historical failure points (e.g. flooded alleys).
+          </p>
+          <button 
+            onClick={handleTrainBrain} 
+            disabled={trainingBrain}
+            style={{
+              width: '100%', padding: '8px', borderRadius: '8px', border: 'none', cursor: 'pointer',
+              background: trainingBrain ? '#475569' : 'linear-gradient(135deg, #ec4899 0%, #db2777 100%)',
+              color: 'white', fontWeight: 'bold', fontSize: 12, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 6
+            }}>
+            {trainingBrain ? <><Loader2 size={14} className="spinner"/> Training in progress...</> : '🧠 Train Brain (1000 Combinations)'}
+          </button>
+          {brainMsg && (
+            <div className="fade-in" style={{ fontSize: 11, color: '#f9a8d4', marginTop: 8, textAlign: 'center' }}>
+              {brainMsg}
+            </div>
+          )}
         </div>
 
         {/* Simulation Controls */}

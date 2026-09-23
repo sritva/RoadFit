@@ -32,7 +32,7 @@ from routing.cvar_optimizer import optimize_cvar_route
 from models.scenario_generator import generate_scenarios
 from vehicle.vehicle_digital_twin import VehicleDigitalTwin
 from data.provenance_store import ProvenanceStore
-
+from brain.cognitive_core import CognitiveCore
 
 def _build_kd_tree(graph):
     nodes_data = list(graph.nodes(data=True))
@@ -56,6 +56,7 @@ MASTER_GRAPH = None
 KD_TREE = None
 NODE_IDS = None
 PROVENANCE = ProvenanceStore()
+BRAIN = CognitiveCore()
 
 print("Loading enriched master graph into memory for API...")
 try:
@@ -86,6 +87,19 @@ class CoordinateRequest(BaseModel):
 def read_root():
     return {"message": "RoadFit-X World Model API v3.0 is online"}
 
+@app.post("/brain/train")
+def train_brain(iterations: int = 1000):
+    if MASTER_GRAPH is None:
+        raise HTTPException(status_code=500, detail="Master graph not loaded.")
+    
+    import threading
+    # Run in background to avoid blocking FastAPI
+    def _train():
+        BRAIN.train_brain(MASTER_GRAPH, iterations)
+    
+    thread = threading.Thread(target=_train)
+    thread.start()
+    return {"message": f"Brain training initiated with {iterations} simulated scenarios in the background."}
 
 def _extract_route_coords_from_edges(
     graph,
@@ -250,8 +264,12 @@ def route_plan(request: CoordinateRequest):
         )
     else:
         print(f"Standard A* mode: rain={rain}, traffic={traffic}, policy={request.unknown_data_policy}")
+        
+        # Inject Episodic Memory bias into the graph based on context
+        biased_graph = BRAIN.apply_cognitive_bias(active_graph, rain, traffic, vehicle.vehicle_type)
+        
         rf_nodes, rf_edges, rf_stats = route_risk_aware(
-            G=active_graph,
+            G=biased_graph,
             orig_node=orig_node,
             dest_node=dest_node,
             vehicle=vehicle,
