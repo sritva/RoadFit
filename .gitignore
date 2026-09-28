@@ -34,6 +34,17 @@ Thumbs.db
 *.swp
 *.swo
 
-# Local data caches
+# Local data caches and databases
 cache/
 *.log
+*.db
+*.db-shm
+*.db-wal
+
+# Generated test artifacts & plots
+verification.png
+test*.png
+pareto_curve.png
+clearance_cdf.png
+ablation_results.csv
+results_100_od.csv

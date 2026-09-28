@@ -33,3 +33,18 @@ class WorkingMemory:
                 # Expired, clean it up
                 del self._cache[edge_id]
         return 0.0
+
+    def get_active_hazards(self) -> Dict[str, float]:
+        """Returns currently active (non-expired) hazards."""
+        now = time.time()
+        active = {}
+        expired = []
+        for edge_id, (severity, expiry) in self._cache.items():
+            if now < expiry:
+                active[edge_id] = severity
+            else:
+                expired.append(edge_id)
+        for e in expired:
+            del self._cache[e]
+        return active
+

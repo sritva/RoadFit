@@ -24,15 +24,32 @@ import uvicorn
 import osmnx as ox
 import shapely.wkt
 
-# Ensure src modules can be imported
+# Ensure src and root are in sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..')))
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
-from routing.risk_aware_router import route_risk_aware
-from routing.cvar_optimizer import optimize_cvar_route
-from models.scenario_generator import generate_scenarios
-from vehicle.vehicle_digital_twin import VehicleDigitalTwin
-from data.provenance_store import ProvenanceStore
-from brain.cognitive_core import CognitiveCore
+try:
+    from src.routing.risk_aware_router import route_risk_aware, _compute_path_stats
+    from src.routing.cvar_optimizer import optimize_cvar_route
+    from src.routing.counterfactual_router import generate_route_explanation
+    from src.models.scenario_generator import generate_scenarios
+    from src.vehicle.vehicle_digital_twin import VehicleDigitalTwin
+    from src.data.provenance_store import ProvenanceStore
+    from src.data.official_rule_rag import enrich_edge_metadata
+    from src.brain.cognitive_core import CognitiveCore
+    from src.evaluation.baseline_routes import route_shortest_eta
+    from src.evaluation.metrics_engine import MetricsEngine
+except ImportError:
+    from routing.risk_aware_router import route_risk_aware, _compute_path_stats
+    from routing.cvar_optimizer import optimize_cvar_route
+    from routing.counterfactual_router import generate_route_explanation
+    from models.scenario_generator import generate_scenarios
+    from vehicle.vehicle_digital_twin import VehicleDigitalTwin
+    from data.provenance_store import ProvenanceStore
+    from data.official_rule_rag import enrich_edge_metadata
+    from brain.cognitive_core import CognitiveCore
+    from evaluation.baseline_routes import route_shortest_eta
+    from evaluation.metrics_engine import MetricsEngine
 
 def _build_kd_tree(graph):
     nodes_data = list(graph.nodes(data=True))
@@ -64,6 +81,14 @@ try:
     print("Graph loaded successfully.")
     KD_TREE, NODE_IDS = _build_kd_tree(MASTER_GRAPH)
     print(f"KD-Tree built with {len(NODE_IDS)} nodes.")
+    # Initialize RAG provenance for edges missing explicit width
+    rag_inferred_count = 0
+    for u, v, k, data in MASTER_GRAPH.edges(keys=True, data=True):
+        if 'width' not in data:
+            enrich_edge_metadata(data, PROVENANCE, (u, v, k))
+            rag_inferred_count += 1
+    if rag_inferred_count > 0:
+        print(f"RAG IRC Rule Engine enriched {rag_inferred_count} edges with official structural standards.")
 except Exception as e:
     print(f"Warning: Could not load master graph. {e}")
     MASTER_GRAPH = None
@@ -136,6 +161,11 @@ def report_live_roadblock(request: RoadblockRequest):
         blocked_edges += 1
         
     return {"message": f"🚨 Working Memory: Blocked {blocked_edges} edges around intersection for 15 minutes."}
+
+@app.get("/brain/status")
+def get_brain_status():
+    """Returns the current state of the tripartite cognitive memory system."""
+    return BRAIN.get_status()
 
 def _extract_route_coords_from_edges(
     graph,
@@ -251,10 +281,6 @@ def route_plan(request: CoordinateRequest):
     traffic = request.traffic_level
 
     # ── Baseline B0 Route for Trade-off Comparison ──
-    from evaluation.baseline_routes import route_shortest_eta
-    from evaluation.metrics_engine import MetricsEngine
-    from routing.risk_aware_router import _compute_path_stats
-    
     b0_nodes = route_shortest_eta(active_graph, orig_node, dest_node)
     b0_edges = []
     b0_coords = []
@@ -379,7 +405,6 @@ def route_plan(request: CoordinateRequest):
     )
 
     # Counterfactual explanations
-    from routing.counterfactual_router import generate_route_explanation
     explanations = generate_route_explanation(rf_stats, rf_nodes)
 
     dist_km = rf_stats.get('distance_m', 0) / 1000.0

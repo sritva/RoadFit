@@ -1,5 +1,11 @@
-import torch
-import torch.nn as nn
+try:
+    import torch
+    import torch.nn as nn
+except ImportError:
+    torch = None
+    class nn:
+        class Module: pass
+
 
 class DifferentiableShortestPath(nn.Module):
     """

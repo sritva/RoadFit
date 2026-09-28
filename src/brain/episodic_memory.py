@@ -108,3 +108,21 @@ class EpisodicMemoryBank:
         c = conn.cursor()
         c.execute('DELETE FROM experiences')
         conn.commit()
+
+    def get_stats(self) -> Dict[str, Any]:
+        """Returns aggregate statistics about stored experiences in episodic memory."""
+        conn = self._get_conn()
+        c = conn.cursor()
+        c.execute('SELECT COUNT(*), SUM(CASE WHEN success = 0 THEN 1 ELSE 0 END) FROM experiences')
+        row = c.fetchone()
+        total = row[0] if row else 0
+        failures = row[1] if row and row[1] is not None else 0
+        c.execute('SELECT COUNT(DISTINCT edge_id) FROM experiences')
+        distinct_edges = c.fetchone()[0]
+        return {
+            "total_experiences": total,
+            "total_failures": failures,
+            "distinct_edges_memorized": distinct_edges,
+            "overall_failure_rate": round(failures / max(1, total), 4)
+        }
+

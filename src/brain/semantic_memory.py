@@ -57,31 +57,40 @@ class SemanticKnowledgeEngine:
 
     def _simulate_multimodal_features(self, highway_type: str, width: float, length: float) -> Tuple[float, float, float]:
         """
-        Oracle simulating a Satellite CV and Raycast pipeline.
-        In a production environment, this would call Google Earth Engine and Mapbox.
+        Deterministic proxy for a Satellite CV and Raycast pipeline.
+        Uses a hash of the input features to produce reproducible pseudo-random
+        values, ensuring the same edge always receives the same prediction.
+        In production, this would call Google Earth Engine and Mapbox.
         """
-        import random
-        # Base distributions on highway type
+        import hashlib
+        # Create a deterministic seed from the inputs
+        seed_str = f"{highway_type}_{width:.2f}_{length:.2f}"
+        h = int(hashlib.sha256(seed_str.encode()).hexdigest(), 16)
+
+        # Deterministic pseudo-random floats in [0, 1) from different hash slices
+        def _hash_float(offset: int) -> float:
+            return ((h >> offset) & 0xFFFF) / 65536.0
+
+        r1, r2, r3 = _hash_float(0), _hash_float(16), _hash_float(32)
+
+        # Base distributions on highway type (deterministic mapping, not random)
         if highway_type in ['residential', 'living_street']:
-            housing_density = random.normalvariate(50.0, 10.0) # Dense housing
-            parked_cars = random.normalvariate(15.0, 5.0)      # Many parked cars blocking shoulders
-            # Raycast: High occlusion, physical width is tighter than reported graph width
-            raycast_occlusion = random.uniform(0.6, 0.95) 
+            housing_density = 40.0 + r1 * 20.0   # 40-60
+            parked_cars = 10.0 + r2 * 10.0        # 10-20
+            raycast_occlusion = 0.6 + r3 * 0.35   # 0.6-0.95
         elif highway_type in ['service', 'pedestrian']:
-            housing_density = random.normalvariate(20.0, 5.0)
-            parked_cars = random.normalvariate(2.0, 1.0)
-            raycast_occlusion = random.uniform(0.4, 0.7)
+            housing_density = 15.0 + r1 * 10.0    # 15-25
+            parked_cars = 1.0 + r2 * 2.0           # 1-3
+            raycast_occlusion = 0.4 + r3 * 0.3     # 0.4-0.7
         elif highway_type in ['primary', 'secondary', 'trunk']:
-            housing_density = random.normalvariate(5.0, 2.0)
-            parked_cars = random.normalvariate(0.5, 0.5)
-            # Raycast: Low occlusion, wide open avenues
-            raycast_occlusion = random.uniform(0.0, 0.2)
+            housing_density = 3.0 + r1 * 4.0      # 3-7
+            parked_cars = r2 * 1.0                  # 0-1
+            raycast_occlusion = r3 * 0.2            # 0.0-0.2
         else:
-            housing_density = random.normalvariate(10.0, 5.0)
-            parked_cars = random.normalvariate(5.0, 2.0)
-            raycast_occlusion = random.uniform(0.2, 0.5)
-            
-        # Ensure positive bounds
+            housing_density = 5.0 + r1 * 10.0     # 5-15
+            parked_cars = 3.0 + r2 * 4.0           # 3-7
+            raycast_occlusion = 0.2 + r3 * 0.3     # 0.2-0.5
+
         return max(0.0, housing_density), max(0.0, parked_cars), max(0.0, min(1.0, raycast_occlusion))
 
     def consolidate(self, db_path: str, G: nx.MultiDiGraph):

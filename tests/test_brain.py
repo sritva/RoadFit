@@ -42,7 +42,7 @@ def test_cognitive_learning(test_graph):
     # We manually commit a massive failure to episodic memory for edge (0, 1, 0)
     edge_id = "0_1_0"
     for _ in range(5):
-        brain.memory.commit_experience(edge_id, "rain", "low", "training_van", False, 999.0)
+        brain.episodic.commit_experience(edge_id, "rain", "low", "training_van", False, 999.0)
         
     # 2. Apply Cognitive Bias
     biased_graph = brain.apply_cognitive_bias(test_graph, "rain", "low", "training_van")

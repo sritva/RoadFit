@@ -143,6 +143,22 @@ export default function App() {
   
   const [trainingBrain, setTrainingBrain] = useState(false);
   const [brainMsg, setBrainMsg] = useState('');
+  const [brainStatus, setBrainStatus] = useState(null);
+
+  const fetchBrainStatus = useCallback(async () => {
+    try {
+      const res = await axios.get(`${API_BASE_URL}/brain/status`);
+      setBrainStatus(res.data);
+    } catch (e) {
+      console.warn("Could not fetch brain status:", e);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchBrainStatus();
+    const timer = setInterval(fetchBrainStatus, 8000);
+    return () => clearInterval(timer);
+  }, [fetchBrainStatus]);
 
   const debouncedOrig = useDebounce(origQuery, 450);
   const debouncedDest = useDebounce(destQuery, 450);
@@ -179,13 +195,11 @@ export default function App() {
     else {
       // Add roadblock to Working Memory
       try {
-        const res = await fetch('http://localhost:8000/brain/roadblock', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ lat: c.lat, lon: c.lon, severity: 1.0 })
+        const res = await axios.post(`${API_BASE_URL}/brain/roadblock`, {
+          lat: c.lat, lon: c.lon, severity: 1.0
         });
-        const data = await res.json();
-        alert(data.message);
+        alert(res.data.message);
+        fetchBrainStatus();
       } catch (err) {
         console.error("Failed to add roadblock", err);
       }
@@ -194,31 +208,31 @@ export default function App() {
 
   const handleTrainBrain = async () => {
     setTrainingBrain(true);
-    setBrainMsg('Brain spinning up multiprocessing... simulating 100,000 combinations (Expect high CPU usage).');
+    setBrainMsg('Brain simulating routing scenarios in background across all cores...');
     try {
-      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=100000`);
+      const res = await axios.post(`${API_BASE_URL}/brain/train?iterations=5000`);
       setBrainMsg(res.data.message);
+      fetchBrainStatus();
     } catch(err) {
-      setBrainMsg('Brain training failed.');
+      setBrainMsg('Brain training initiation failed.');
     } finally {
       setTimeout(() => {
         setTrainingBrain(false);
-        setBrainMsg('');
-      }, 7000);
+        fetchBrainStatus();
+      }, 5000);
     }
   };
 
   const handleConsolidateBrain = async () => {
     try {
-      const res = await fetch('http://localhost:8000/brain/consolidate', {
-        method: 'POST'
-      });
-      const data = await res.json();
-      alert(data.message);
+      const res = await axios.post(`${API_BASE_URL}/brain/consolidate`);
+      alert(res.data.message);
+      fetchBrainStatus();
     } catch (err) {
-      alert("API Error");
+      alert("API Error: Consolidation failed");
     }
   };
+
 
   const calculateRoute = async () => {
     if (!origin || !destination) return;
@@ -502,6 +516,105 @@ export default function App() {
           </label>
         </div>
 
+        {/* 🧠 Tri-Partite Cognitive Architecture Panel */}
+        <div style={{
+          background: 'linear-gradient(145deg, rgba(30, 27, 75, 0.65), rgba(15, 23, 42, 0.85))',
+          border: '1px solid rgba(139, 92, 246, 0.35)',
+          borderRadius: 14,
+          padding: 14,
+          boxShadow: '0 8px 32px 0 rgba(0, 0, 0, 0.37)'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 10 }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontWeight: 700, fontSize: 13, color: '#c4b5fd' }}>
+              <Brain size={16} color="#a78bfa" />
+              Cognitive Core (Brain State)
+            </div>
+            <button
+              onClick={fetchBrainStatus}
+              title="Refresh brain memory status"
+              style={{ background: 'transparent', border: 'none', color: '#94a3b8', cursor: 'pointer', fontSize: 12, padding: 2 }}
+            >
+              🔄
+            </button>
+          </div>
+
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 6, marginBottom: 10 }}>
+            {/* Episodic */}
+            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '6px 4px', textAlign: 'center' }}>
+              <div style={{ fontSize: 9, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 0.5 }}>Episodic</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: '#a78bfa', marginTop: 2 }}>
+                {brainStatus?.episodic?.total_experiences ?? 0}
+              </div>
+              <div style={{ fontSize: 8, color: '#64748b' }}>episodes</div>
+            </div>
+
+            {/* Semantic */}
+            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '6px 4px', textAlign: 'center' }}>
+              <div style={{ fontSize: 9, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 0.5 }}>Semantic</div>
+              <div style={{ fontSize: 11, fontWeight: 700, color: brainStatus?.semantic?.trained ? '#10b981' : '#f59e0b', marginTop: 3 }}>
+                {brainStatus?.semantic?.trained ? 'Trained' : 'Untrained'}
+              </div>
+              <div style={{ fontSize: 8, color: '#64748b' }}>RandomForest</div>
+            </div>
+
+            {/* Working */}
+            <div style={{ background: 'rgba(255,255,255,0.04)', borderRadius: 8, padding: '6px 4px', textAlign: 'center' }}>
+              <div style={{ fontSize: 9, color: '#94a3b8', textTransform: 'uppercase', letterSpacing: 0.5 }}>Working</div>
+              <div style={{ fontSize: 13, fontWeight: 700, color: (brainStatus?.working?.active_hazards_count || 0) > 0 ? '#ef4444' : '#10b981', marginTop: 2 }}>
+                {brainStatus?.working?.active_hazards_count ?? 0}
+              </div>
+              <div style={{ fontSize: 8, color: '#64748b' }}>live hazards</div>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', gap: 6 }}>
+            <button
+              onClick={handleTrainBrain}
+              disabled={trainingBrain}
+              style={{
+                flex: 1,
+                padding: '6px 8px',
+                borderRadius: 8,
+                fontSize: 10,
+                fontWeight: 600,
+                background: 'rgba(124, 58, 237, 0.35)',
+                border: '1px solid rgba(139, 92, 246, 0.4)',
+                color: '#e0e7ff',
+                cursor: trainingBrain ? 'not-allowed' : 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: 4
+              }}
+            >
+              {trainingBrain ? <Loader2 size={12} className="spinner" /> : <Zap size={12} />}
+              Train REM Sleep
+            </button>
+            <button
+              onClick={handleConsolidateBrain}
+              style={{
+                flex: 1,
+                padding: '6px 8px',
+                borderRadius: 8,
+                fontSize: 10,
+                fontWeight: 600,
+                background: 'rgba(16, 185, 129, 0.15)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+                color: '#6ee7b7',
+                cursor: 'pointer'
+              }}
+            >
+              Consolidate (ML)
+            </button>
+          </div>
+
+          {brainMsg && (
+            <div style={{ fontSize: 10, color: '#a5b4fc', marginTop: 6, textAlign: 'center' }}>
+              {brainMsg}
+            </div>
+          )}
+        </div>
+
         <button className="primary-btn" onClick={calculateRoute} disabled={loading || !origin || !destination}>
           {loading ? (
             <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
@@ -509,6 +622,7 @@ export default function App() {
             </span>
           ) : '⚡ Calculate Optimal Route'}
         </button>
+
 
         {errorMsg && (
           <div className="fade-in" style={{ background: 'rgba(239,68,68,0.1)', border: '1px solid rgba(239,68,68,0.3)', borderRadius: 10, padding: '10px 14px', fontSize: 13, color: '#fca5a5', display: 'flex', gap: 8 }}>

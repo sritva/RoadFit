@@ -19,6 +19,7 @@ class VehicleDigitalTwin(BaseModel):
     rain_tolerance: Literal["low", "medium", "high"]
     risk_preference: Literal["aggressive", "moderate", "conservative"]
     unknown_data_policy: Literal["strict", "conservative", "exploratory"] = "conservative"
+    cargo_class: str = "standard"
 
     def __str__(self):
         return f"{self.vehicle_type} (W:{self.width_m}m, H:{self.height_m}m, Wgt:{self.gross_weight_t}t)"

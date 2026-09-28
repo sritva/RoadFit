@@ -41,23 +41,25 @@ def deterministic_env_hazard(edge_id: str, weather: str, traffic: str, data: dic
 
     return fail_prob >= 1.0
 
-def simulate_routes_chunk(G: nx.MultiDiGraph, iterations: int, vehicle: VehicleDigitalTwin) -> List[Tuple]:
+def simulate_routes_chunk(G: nx.MultiDiGraph, iterations: int, vehicle: VehicleDigitalTwin, seed: Optional[int] = None) -> List[Tuple]:
     """
     Worker function to simulate a chunk of routes in parallel.
     Returns a list of experience tuples ready for batch DB insertion.
+    Uses an isolated Random instance if seed is provided for reproducible ablations.
     """
+    rng = random.Random(seed) if seed is not None else random
     nodes = list(G.nodes)
     weathers = ["clear", "rain", "storm"]
     traffics = ["low", "peak"]
     experiences = []
     
     for _ in range(iterations):
-        orig = random.choice(nodes)
-        dest = random.choice(nodes)
+        orig = rng.choice(nodes)
+        dest = rng.choice(nodes)
         if orig == dest: continue
         
-        weather = random.choice(weathers)
-        traffic = random.choice(traffics)
+        weather = rng.choice(weathers)
+        traffic = rng.choice(traffics)
         
         path_nodes, path_edges, stats = route_risk_aware(G, orig, dest, vehicle)
         
@@ -87,12 +89,13 @@ class CognitiveCore:
         self.semantic = SemanticKnowledgeEngine()
         self.working = WorkingMemory()
 
-    def train_brain(self, G: nx.MultiDiGraph, iterations: int = 20000):
+    def train_brain(self, G: nx.MultiDiGraph, iterations: int = 20000, seed: Optional[int] = 42):
         """
-        Simulates 20,000 random routing tasks across all available CPU cores.
+        Simulates random routing tasks across all available CPU cores.
+        Pass a seed for reproducible ablation studies.
         """
         import os
-        num_cores = max(1, os.cpu_count() - 1)
+        num_cores = max(1, (os.cpu_count() or 2) - 1)
         chunk_size = max(1, iterations // num_cores)
         chunks = [chunk_size] * num_cores
         
@@ -110,13 +113,17 @@ class CognitiveCore:
             unknown_data_policy="exploratory"
         )
         
-        print(f"🧠 Brain entering REM sleep... scaling out {iterations} scenarios across {num_cores} cores.")
+        print(f"🧠 Brain entering REM sleep... scaling out {iterations} scenarios across {num_cores} cores (seed={seed}).")
         
         start_t = time.time()
         total_experiences = 0
         
         with concurrent.futures.ProcessPoolExecutor(max_workers=num_cores) as executor:
-            futures = [executor.submit(simulate_routes_chunk, G, c, vehicle) for c in chunks]
+            futures = [
+                executor.submit(simulate_routes_chunk, G, c, vehicle, (seed + i) if seed is not None else None)
+                for i, c in enumerate(chunks)
+            ]
+
             
             for future in concurrent.futures.as_completed(futures):
                 try:
@@ -160,3 +167,25 @@ class CognitiveCore:
             data['_history_penalty'] = semantic_penalty
                 
         return G_biased
+
+    def report_hazard(self, edge_id: str, severity: float, ttl_seconds: int = 900):
+        """Reports a dynamic live hazard directly into Working Memory."""
+        self.working.report_live_hazard(edge_id, severity, ttl_seconds)
+
+    def get_status(self) -> Dict[str, Any]:
+        """Returns overall state of the tripartite cognitive memory architecture."""
+        episodic_stats = self.episodic.get_stats()
+        semantic_trained = getattr(self.semantic, 'model', None) is not None
+        active_hazards = self.working.get_active_hazards()
+        return {
+            "episodic": episodic_stats,
+            "semantic": {
+                "trained": semantic_trained,
+                "n_estimators": getattr(self.semantic.model, 'n_estimators', None) if semantic_trained else None
+            },
+            "working": {
+                "active_hazards_count": len(active_hazards),
+                "active_hazards": active_hazards
+            }
+        }
+
